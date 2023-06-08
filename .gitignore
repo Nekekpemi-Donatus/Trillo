@@ -1,0 +1,6 @@
+# virtual environment
+trillo_env
+
+# Environment variable
+.env
+
