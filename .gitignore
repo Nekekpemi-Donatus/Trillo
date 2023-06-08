@@ -4,3 +4,5 @@ trillo_env
 # Environment variable
 .env
 
+# database
+db.sqlite3
