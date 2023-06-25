@@ -1,0 +1,139 @@
+@import 'variables';
+
+.register {
+  height: 82.7%;
+  width: 60%;
+  // background-color: rgba(123, 123, 143, 0.845);
+  transform: translate(33%, 10%);
+  border-radius: 2rem;
+  overflow: hidden;
+  box-shadow: $shadow-dark;
+  z-index: 2;
+  position: relative;
+}
+
+.box {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  transition: all 1s 0.4s;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  backface-visibility: hidden;
+
+  &__header {
+    font-size: 4rem !important;
+    font-weight: 600;
+  }
+
+  &__text {
+    font-size: 1.6rem;
+    text-align: center;
+    line-height: 2.5rem;
+
+    &-2 {
+      color: $color-grey-light-4;
+    }
+  }
+
+  &-1 {
+    &__left {
+      z-index: 2;
+
+      // transform: translateX(149.9%);
+    }
+
+    &__right {
+      background-image: linear-gradient(
+          to right bottom,
+          rgba($color-black, 0.7),
+          rgba($color-black, 0.7)
+        ),
+        url('../img/plane-3.jpg');
+      // transform: translateX(-66.9%);
+    }
+  }
+
+  &-2 {
+    grid-template-columns: 60% 40%;
+    height: 100%;
+    &__right {
+      // background-color: rgb(228, 63, 126) !important;
+      background-color: $color-primary-light !important;
+      // TEST
+      transform: translateX(-149.7%);
+      // z-index: 2;
+    }
+
+    &__left {
+      align-items: center;
+      // row-gap: 8rem;
+      background-image: linear-gradient(
+          to right bottom,
+          rgba($color-black, 0.7),
+          rgba($color-black, 0.7)
+        ),
+        url('../img/plane-2.png');
+      background-size: cover;
+      background-position: center;
+      // TEST
+      transform: translateX(66.9%);
+    }
+  }
+
+  &__center-text {
+    background-color: rgb(109, 110, 103);
+    display: grid;
+    color: $color-grey-light-3;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+    row-gap: 3rem;
+    padding: 5rem;
+    transition: all 2s;
+  }
+
+  &__center-form {
+    display: grid;
+    justify-content: center;
+    padding: 4.5rem 0;
+
+    transition: all 2s;
+  }
+
+  &__btn {
+    background-color: transparent;
+    color: $color-grey-light-3;
+    font-size: $default-size;
+    font-weight: 600;
+    border-radius: 4rem;
+    border: 0.3rem solid $color-grey-light-3;
+    padding: 2.2rem 6.8rem;
+    margin-top: 2rem;
+    cursor: pointer;
+    box-shadow: $shadow-light;
+    margin-bottom: 2rem;
+    transition: all 0.5s;
+
+    &:hover {
+      box-shadow: $shadow-dark;
+      transform: translateY(-0.2rem);
+    }
+
+    &-2 {
+      color: $color-grey-light-4;
+      border: 0.3rem solid $color-grey-light-4;
+    }
+  }
+}
+
+.overview {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  // background-color: rgba(255, 255, 255, 0.108);
+  backdrop-filter: blur(4px);
+}
