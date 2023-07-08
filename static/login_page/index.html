@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <script type="module" src="../js/script.js"></script>
+
+    <title>Hotel | login</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="overview"></div>
+      <div class="register">
+
+        <!-- First Box -->
+        <div class="box box-1">
+          <div class="box-1__left box__center-text">
+            <h1 class="box__header">Welcome Back!</h1>
+            <p class="box__text ">
+              To keep connected with us please login with your personal info
+            </p>
+            <button class="box__btn btn__moveRight">SIGN IN</button>
+          </div>
+          
+          <div class="box-1__right box__center-form">
+            <h1 class="cta__header box__header">Create Account</h1>
+            <form action="sign-up" class="sign__up">
+              <div class="sign__up-names">
+                <div>
+                  <input type="text" class="cta__input sign__up-name" placeholder="First Name" required></input>
+                  <label class="cta__label">First Name</label>
+                </div>
+
+                <div>
+                  <input type="text" class="cta__input sign__up-name" placeholder="Last Name" required></input>
+                  <label class="cta__label">Last Name</label>
+                </div>
+              </div>
+
+              <div>
+                <input type="email" class="cta__input" placeholder="Email" required></input>
+                <label class="cta__label">Email</label>
+              </div>
+
+              <div>
+                <input type="password" class="cta__input" placeholder="Password" required></input>
+                <label class="cta__label">Password</label>
+              </div>
+
+              <div>
+                <input type="password" class="cta__input" placeholder="Confirm Password" required></input>
+                <label class="cta__label">Confirm Password</label>
+              </div>
+
+              <div class="cta__checkbox">
+                <input type="checkbox" class="cta__checkbox-input" id="checkbox--1" required>
+                <div class="cta__checkbox-input-main"></div>
+                <label for="checkbox--1" class="cta__checkbox-label box__text-2">I Agree with<a href="#" class="cta__forgetPassword">privacy</a> and<a href="#" class="cta__forgetPassword">policy</a></label>
+                
+              </div>
+
+              <button class="box__btn box__btn-2 submit__btn" type="submit">SIGN UP</button>
+
+            </form>
+          </div>
+          
+        </div>
+
+        <!-- Second Box -->
+        <div class="box box-2 hidden">
+          <div class="box-2__left box__center-form">
+            <form action="sign-in">
+              <h1 class="cta__header">Sign in to your Account</h1>
+              <div>
+                <input type="email" class="cta__input input-email" placeholder="Email" required></input>
+                <label class="cta__label">Email</label>
+              </div>
+    
+              <div>
+                <input type="password" class="cta__input" placeholder="Password" required></input>
+                <label class="cta__label">Password</label>
+              </div>
+    
+              <div class="cta__checkbox">
+                <input type="checkbox" class="cta__checkbox-input" id="checkbox--2" required>
+                <div class="cta__checkbox-input-main"></div>
+                <label for="checkbox--2" class="cta__checkbox-label box__text-2">Remember me</label>
+                
+                <a href="#" class="cta__forgetPassword">Forget Password ?</a>
+              </div>
+    
+              <button class="cta__btn cta__btn-login submit__btn">SING IN</button>
+    
+            </form>
+          </div>
+          
+          <div class="box-2__right box__center-text">
+            <h1 class="box__header">Hello, Friend!</h1>
+            <p class="box__text ">
+              Enter your personal details and feel our comfort
+            </p>
+            <button class="box__btn btn__moveLeft">SIGN UP</button>
+          </div>
+        </div>
+    </div>
+  </body>
+</html>
