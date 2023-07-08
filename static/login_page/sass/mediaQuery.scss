@@ -1,0 +1,90 @@
+@import 'variables';
+
+.register {
+  @media only screen and (max-width: $bp-large) {
+    margin: 0;
+    border-radius: 0;
+    height: 100vh;
+  }
+}
+
+.box {
+  &-1 {
+    @media only screen and (max-width: $bp-large) {
+      grid-template-columns: minmax(35rem, 40%) 60%;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      grid-template-columns: minmax(33rem, 40%) 60%;
+    }
+
+    @media only screen and (max-width: $bp-smallest) {
+      grid-template-columns: 1fr;
+      grid-template-rows: 0.8fr 2.2fr;
+    }
+  }
+
+  &-2 {
+    @media only screen and (max-width: $bp-smallest) {
+      grid-template-columns: 1fr;
+      grid-template-rows: 2fr 1fr;
+    }
+  }
+
+  &__header {
+    @media only screen and (max-width: $bp-medium) {
+      font-size: 3.2rem !important;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      font-size: 3rem !important;
+    }
+  }
+
+  &__text {
+    @media only screen and (max-width: $bp-small) {
+      font-size: 1.4rem;
+    }
+  }
+
+  &-1__right {
+    @media only screen and (max-width: $bp-medium) {
+      max-width: 100%;
+      padding: 6rem;
+    }
+
+    @media only screen and (max-width: $bp-smallest) {
+      margin-top: -4rem;
+    }
+  }
+}
+
+.sign__up {
+  @media only screen and (max-width: $bp-medium) {
+    max-width: 80%;
+    // justify-self: center;
+  }
+
+  &-names {
+    @media only screen and (max-width: $bp-large) {
+      column-gap: 0.3rem;
+    }
+  }
+
+  &-name {
+    width: 80%;
+  }
+}
+
+.sign__up {
+  @media only screen and (max-width: $bp-smallest) {
+    row-gap: 0.2rem;
+    margin-top: -6rem;
+  }
+}
+
+.btn__moveLeft {
+  @media only screen and (max-width: $bp-small) {
+    padding: 2.2rem 6.4rem;
+  }
+}

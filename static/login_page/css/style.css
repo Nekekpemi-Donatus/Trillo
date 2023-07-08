@@ -1,0 +1,284 @@
+.register {
+  height: 82.7%;
+  min-width: 60rem;
+  max-width: 110rem;
+  border-radius: 2rem;
+  overflow: hidden;
+  box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.3);
+  z-index: 2;
+  position: relative;
+  margin: 8rem auto; }
+
+.box {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  transition: all 1s 0.4s;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  backface-visibility: hidden; }
+  .box__header {
+    font-size: 4rem !important;
+    font-weight: 600; }
+  .box__text {
+    font-size: 1.6rem;
+    text-align: center;
+    line-height: 2.5rem; }
+    .box__text-2 {
+      color: #ccc; }
+  .box-1__left {
+    z-index: 2; }
+  .box-1__right {
+    background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/plane-3.jpg"); }
+  .box-2 {
+    grid-template-columns: 60% 40%;
+    height: 100%; }
+    .box-2__right {
+      background-color: #ff3366 !important;
+      transform: translateX(-149.7%); }
+    .box-2__left {
+      align-items: center;
+      background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/plane-2.png");
+      background-size: cover;
+      background-position: center;
+      transform: translateX(66.9%); }
+  .box__center-text {
+    background-color: #6d6e67;
+    display: grid;
+    color: #f0eeee;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+    row-gap: 3rem;
+    padding: 5rem;
+    transition: all 2s; }
+  .box__center-form {
+    display: grid;
+    justify-content: center;
+    padding: 4.5rem 0;
+    transition: all 2s; }
+  .box__btn {
+    background-color: transparent;
+    color: #f0eeee;
+    font-size: 1.6rem;
+    font-weight: 600;
+    border-radius: 4rem;
+    border: 0.3rem solid #f0eeee;
+    padding: 2.2rem 6.8rem;
+    margin-top: 2rem;
+    cursor: pointer;
+    box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2);
+    margin-bottom: 2rem;
+    transition: all 0.5s; }
+    .box__btn:hover {
+      box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.3);
+      transform: translateY(-0.2rem); }
+    .box__btn-2 {
+      color: #ccc;
+      border: 0.3rem solid #ccc; }
+
+.overview {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  backdrop-filter: blur(4px); }
+
+@media only screen and (max-width: 68.75em) {
+  .register {
+    margin: 0;
+    border-radius: 0;
+    height: 100vh; } }
+
+@media only screen and (max-width: 68.75em) {
+  .box-1 {
+    grid-template-columns: minmax(35rem, 40%) 60%; } }
+
+@media only screen and (max-width: 46.875em) {
+  .box-1 {
+    grid-template-columns: minmax(33rem, 40%) 60%; } }
+
+@media only screen and (max-width: 37.5em) {
+  .box-1 {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.8fr 2.2fr; } }
+
+@media only screen and (max-width: 37.5em) {
+  .box-2 {
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 1fr; } }
+
+@media only screen and (max-width: 56.25em) {
+  .box__header {
+    font-size: 3.2rem !important; } }
+
+@media only screen and (max-width: 46.875em) {
+  .box__header {
+    font-size: 3rem !important; } }
+
+@media only screen and (max-width: 46.875em) {
+  .box__text {
+    font-size: 1.4rem; } }
+
+@media only screen and (max-width: 56.25em) {
+  .box-1__right {
+    max-width: 100%;
+    padding: 6rem; } }
+
+@media only screen and (max-width: 37.5em) {
+  .box-1__right {
+    margin-top: -4rem; } }
+
+@media only screen and (max-width: 56.25em) {
+  .sign__up {
+    max-width: 80%; } }
+
+@media only screen and (max-width: 68.75em) {
+  .sign__up-names {
+    column-gap: 0.3rem; } }
+
+.sign__up-name {
+  width: 80%; }
+
+@media only screen and (max-width: 37.5em) {
+  .sign__up {
+    row-gap: 0.2rem;
+    margin-top: -6rem; } }
+
+@media only screen and (max-width: 46.875em) {
+  .btn__moveLeft {
+    padding: 2.2rem 6.4rem; } }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+
+body {
+  box-sizing: border-box;
+  font-family: 'open sans', sans-serif;
+  font-weight: 400;
+  background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../img/plane-1.jpg");
+  background-size: cover;
+  background-position: center; }
+
+.container {
+  height: 100vh;
+  position: relative; }
+
+form {
+  display: grid;
+  grid-template-rows: auto;
+  row-gap: 2rem; }
+
+.cta {
+  position: absolute;
+  left: 73%;
+  top: 20%;
+  width: 35rem;
+  background-color: rgba(63, 64, 64, 0.453);
+  padding: 2rem;
+  border-radius: 2rem; }
+  .cta__signUP {
+    top: 12%; }
+  .cta__header {
+    font-size: 3rem;
+    font-weight: 600;
+    margin: 2rem 0 4rem 0;
+    color: #ccc; }
+  .cta__input {
+    display: block;
+    width: 90%;
+    font-size: 1.6rem;
+    font-weight: inherit;
+    font-family: inherit;
+    color: #ccc;
+    background-color: transparent;
+    padding: 1.2rem 1.5rem;
+    border: none;
+    outline: none;
+    border: 2.8px solid #ff3366;
+    border-radius: 3rem;
+    transition: all 0.5s; }
+    .cta__input:focus {
+      border: 2.8px solid #ff3366; }
+    .cta__input:focus:invalid {
+      border: 2.8px solid #300a0a; }
+    .cta__input::-webkit-input-placeholder {
+      color: #ccc; }
+  .cta__label {
+    display: block;
+    color: #ccc;
+    font-size: 1.6rem;
+    margin-left: 1.8rem;
+    margin-top: 0.8rem;
+    transition: all 0.5s; }
+  .cta__checkbox {
+    display: flex;
+    align-items: center;
+    position: relative; }
+    .cta__checkbox-input {
+      position: absolute;
+      cursor: pointer;
+      left: 1.5rem;
+      top: 6px;
+      opacity: 0; }
+      .cta__checkbox-input-main {
+        height: 2rem;
+        width: 2rem;
+        background-color: transparent;
+        border: 2px solid #ccc;
+        border-radius: 0.5rem;
+        margin: 0 1rem;
+        cursor: pointer; }
+    .cta__checkbox-label {
+      font-size: 1.6rem; }
+      .cta__checkbox-label:hover {
+        cursor: pointer; }
+  .cta__forgetPassword {
+    margin-left: 1.5rem; }
+    .cta__forgetPassword:link, .cta__forgetPassword:visited {
+      color: #ff3366;
+      font-size: 1.6rem;
+      text-decoration: none; }
+    .cta__forgetPassword:hover, .cta__forgetPassword:active {
+      color: #8c8ce6; }
+  .cta__btn {
+    padding: 2rem 2rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 1rem;
+    cursor: pointer;
+    box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.3);
+    transition: all 0.3s;
+    position: relative; }
+  .cta__btn-login {
+    background-color: #ff3366;
+    color: #ccc; }
+    .cta__btn-login:hover {
+      background-color: #ba265d; }
+  .cta__input:placeholder-shown ~ .cta__label {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-4.1rem); }
+  .cta__checkbox-input:checked ~ .cta__checkbox-input-main {
+    background-color: #ff3366; }
+  .cta__checkbox-input:focus ~ .cta__checkbox-input-main {
+    border: 2px solid #000; }
+
+.sign__up-names {
+  display: flex;
+  column-gap: 1rem; }
+
+.sign__up-name {
+  width: 80%; }
+
+.hidden {
+  opacity: 0;
+  visibility: hidden; }

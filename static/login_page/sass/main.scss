@@ -1,0 +1,203 @@
+@import 'register';
+@import 'variables';
+@import 'mediaQuery';
+
+// BASE
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: 'open sans', sans-serif;
+  font-weight: 400;
+
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-black, 0.2),
+      rgba($color-black, 0.2)
+    ),
+    url('../img/plane-1.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+////////////////////////////////
+// LOGIN
+
+.container {
+  height: 100vh;
+  position: relative;
+}
+
+form {
+  display: grid;
+  grid-template-rows: auto;
+  row-gap: 2rem;
+}
+
+.cta {
+  position: absolute;
+  left: 73%;
+  top: 20%;
+  // height: 50rem;
+  width: 35rem;
+  background-color: rgba(63, 64, 64, 0.453);
+  padding: 2rem;
+  border-radius: 2rem;
+
+  &__signUP {
+    top: 12%;
+  }
+
+  &__header {
+    font-size: 3rem;
+    font-weight: 600;
+    margin: 2rem 0 4rem 0;
+    color: $color-grey-light-4;
+  }
+
+  &__input {
+    display: block;
+    width: 90%;
+    font-size: $default-size;
+    font-weight: inherit;
+    font-family: inherit;
+    color: $color-grey-light-4;
+    background-color: transparent;
+    padding: 1.2rem 1.5rem;
+    border: none;
+    outline: none;
+    border: 2.8px solid $color-primary-light;
+    border-radius: 3rem;
+    transition: all 0.5s;
+
+    &:focus {
+      border: 2.8px solid $color-primary-light;
+    }
+
+    &:focus:invalid {
+      border: 2.8px solid #300a0a;
+    }
+
+    &::-webkit-input-placeholder {
+      color: $color-grey-light-4;
+    }
+  }
+
+  &__label {
+    display: block;
+    color: $color-grey-light-4;
+    font-size: $default-size;
+    margin-left: 1.8rem;
+    margin-top: 0.8rem;
+    transition: all 0.5s;
+  }
+
+  &__checkbox {
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    &-input {
+      position: absolute;
+      cursor: pointer;
+      left: 1.5rem;
+      top: 6px;
+      opacity: 0;
+
+      &-main {
+        height: 2rem;
+        width: 2rem;
+        background-color: transparent;
+        border: 2px solid $color-grey-light-4;
+        border-radius: 0.5rem;
+        margin: 0 1rem;
+        cursor: pointer;
+      }
+    }
+
+    &-label {
+      font-size: $default-size;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__forgetPassword {
+    margin-left: 1.5rem;
+    &:link,
+    &:visited {
+      color: $color-primary-light;
+      font-size: $default-size;
+      text-decoration: none;
+    }
+    &:hover,
+    &:active {
+      color: rgb(140, 140, 230);
+    }
+  }
+
+  &__btn {
+    padding: 2rem 2rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 1rem;
+    cursor: pointer;
+    box-shadow: $shadow-dark;
+    transition: all 0.3s;
+    position: relative;
+  }
+
+  &__btn-login {
+    background-color: $color-primary-light;
+    color: $color-grey-light-4;
+
+    &:hover {
+      background-color: $color-primary-dark;
+    }
+  }
+
+  // FUNCTIONALITY
+
+  &__input:placeholder-shown ~ &__label {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-4.1rem);
+  }
+
+  &__checkbox-input:checked ~ &__checkbox-input-main {
+    background-color: $color-primary-light;
+  }
+
+  &__checkbox-input:focus ~ &__checkbox-input-main {
+    border: 2px solid #000;
+  }
+}
+
+/////////////////////
+/// SIGN__UP
+.sign__up {
+  &-names {
+    display: flex;
+    column-gap: 1rem;
+  }
+
+  &-name {
+    width: 80%;
+  }
+}
+
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
